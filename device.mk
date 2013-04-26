@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright (C) 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,22 +23,13 @@
 $(call inherit-product-if-exists, vendor/lge/gee/gee-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/geeb_ca/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 ## common overlays
 DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay
 
 # Inherit from gee-common
 $(call inherit-product, device/lge/gee-common/gee-common.mk)
-
-# Enable for debugging
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.debuggable=1 \
-    persist.service.adb.enable=1
-
-# Do not power down SIM card when modem is sent to Low Power Mode.
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.apm_sim_not_pwdn=1
 
 # Telephony Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -49,21 +40,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Vold configuration
 PRODUCT_COPY_FILES += \
-    device/lge/geeb_ca/vold.fstab:system/etc/vold.fstab
+    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-        device/lge/geeb_ca/configs/gps.conf:system/etc/gps.conf
+    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/lge/geeb_ca/ramdisk/init.geeb_ca.rc:root/init.geeb_ca.rc \
-    device/lge/geeb_ca/ramdisk/ueventd.geeb_ca.rc:root/ueventd.geeb_ca.rc \
-    device/lge/geeb_ca/ramdisk/fstab.gee:root/fstab.gee
+    $(LOCAL_PATH)/ramdisk/init.geeb.rc:root/init.geeb.rc \
+    $(LOCAL_PATH)/ramdisk/ueventd.geeb.rc:root/ueventd.geeb.rc \
+    $(LOCAL_PATH)/ramdisk/fstab.gee:root/fstab.gee
 
 # NFC Firmware
 PRODUCT_COPY_FILES += \
-    device/lge/geeb_ca/prebuilt/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
+    $(LOCAL_PATH)/prebuilt/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -71,4 +62,4 @@ PRODUCT_COPY_FILES += \
 
 # CameraHAL
 PRODUCT_PACKAGES += \
-   camera.geeb_ca
+   camera.geeb

@@ -54,7 +54,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC Firmware
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
+    $(LOCAL_PATH)/prebuilt/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \

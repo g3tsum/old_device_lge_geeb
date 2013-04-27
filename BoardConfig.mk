@@ -20,13 +20,13 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
 TARGET_KERNEL_CONFIG := geeb_defconfig
-TARGET_KERNEL_SOURCE := kernel/lge/geeb
+TARGET_KERNEL_SOURCE := kernel/lge/geeb_mod
 
 # inherit from gee-common
 -include device/lge/gee-common/BoardConfigCommon.mk
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := gee,geebus,geebusc,geeb_att,geeb,gee_sp,geeb_att_us,e970,e973,geeb_att_us,jeebus,jeebusc,geeb_ca
+# TARGET_OTA_ASSERT_DEVICE := gee,geebus,geebusc,geeb_att,geeb,gee_sp,geeb_att_us,e970,e973,geeb_att_us,jeebus,jeebusc,geeb_ca
 
 # board-info
 TARGET_BOARD_INFO_FILE := device/lge/geeb/board-info.txt

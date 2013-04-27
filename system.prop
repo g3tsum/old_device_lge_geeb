@@ -1,11 +1,22 @@
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+
 ro.ril.transmitpower=true
-
-ro.bluetooth.request.master=false
-ro.bluetooth.remote.autoconnect=true
-
 ro.vendor.extension_library=/system/lib/libqc-opt.so
+
+persist.gps.qc_nlp_in_use=0
+persist.gps.qmienabled=true
 
 persist.adb.notify=0
 debug.sf.hw=1
@@ -15,6 +26,9 @@ video.accelerate.hw=1
 debug.performance.tuning=1
 debug.mdpcomp.logs=0
 debug.enable.wl_log=1
+
+ro.bluetooth.request.master=false
+ro.bluetooth.remote.autoconnect=true
 
 # About Phone / Hardware Info
 ro.device.chipset=Qualcomm Snapdragon S4 Pro APQ8064

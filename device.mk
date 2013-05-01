@@ -22,9 +22,6 @@
 ## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/lge/gee/gee-vendor.mk)
 
-## overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 ## common overlays
 DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay
 

@@ -22,8 +22,8 @@
 ## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/lge/gee/gee-vendor.mk)
 
-## common overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay
+## overlays
+DEVICE_PACKAGE_OVERLAYS += device/lge/geeb/overlay
 
 # Inherit from gee-common
 $(call inherit-product, device/lge/gee-common/gee-common.mk)

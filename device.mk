@@ -46,7 +46,6 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.geeb.rc:root/init.geeb.rc \
-    $(LOCAL_PATH)/ramdisk/ueventd.geeb.rc:root/ueventd.geeb.rc \
     $(LOCAL_PATH)/ramdisk/fstab.gee:root/fstab.gee
 
 # NFC Firmware

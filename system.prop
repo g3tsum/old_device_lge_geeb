@@ -1,10 +1,15 @@
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+ro.ril.transmitpower=true
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+
 persist.gps.qc_nlp_in_use=0
 persist.gps.qmienabled=true
 
 persist.adb.notify=0
 debug.sf.hw=1
 debug.egl.hw=1
-debug.composition.type=gpu
+debug.composition.type=dyn
 video.accelerate.hw=1
 debug.performance.tuning=1
 debug.mdpcomp.logs=0
